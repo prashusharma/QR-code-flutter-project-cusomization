@@ -1,0 +1,70 @@
+{
+  "project_info": {
+    "project_number": "511821267483",
+    "project_id": "qr-menu-laravel",
+    "storage_bucket": "qr-menu-laravel.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:511821267483:android:6d8884661631f3956f6ebe",
+        "android_client_info": {
+          "package_name": "com.iqonic.qrmenu_laravel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "511821267483-4j6mdj4c3klm9pg8lrdovr19ps7n6bmg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iqonic.qrmenu_laravel",
+            "certificate_hash": "1228735055152fa838b764c5ab00cecb0bb4a84e"
+          }
+        },
+        {
+          "client_id": "511821267483-bkqv9p32aqcm0b6ha1j4v4cb636q54c1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iqonic.qrmenu_laravel",
+            "certificate_hash": "2655abcda45049d8d9a1af05332ad10c6ff2634b"
+          }
+        },
+        {
+          "client_id": "511821267483-ss9g372klhignms6gq22khuqdtiko29j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iqonic.qrmenu_laravel",
+            "certificate_hash": "4c97601df6454c7cea189b65a88ed1078859fda5"
+          }
+        },
+        {
+          "client_id": "511821267483-c25u0akg5ium8an55ddsbjdikjhqqu44.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWsdledgUlmDi5ECDX5dZWHGlLjYQ8oxU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "511821267483-c25u0akg5ium8an55ddsbjdikjhqqu44.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "511821267483-bmav6q72rahupgj78qgv92toin9c3atu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.iqonic.qrmenularavel"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

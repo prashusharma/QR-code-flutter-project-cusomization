@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CLIENT_ID</key>
+    <string>511821267483-bmav6q72rahupgj78qgv92toin9c3atu.apps.googleusercontent.com</string>
+    <key>REVERSED_CLIENT_ID</key>
+    <string>com.googleusercontent.apps.511821267483-bmav6q72rahupgj78qgv92toin9c3atu</string>
+    <key>ANDROID_CLIENT_ID</key>
+    <string>511821267483-40nub84h29362gno08uaupddklmr154k.apps.googleusercontent.com</string>
+    <key>API_KEY</key>
+    <string>AIzaSyAtZojQzf0sjzkCG9UmGm8xgE8YdB0fVk0</string>
+    <key>GCM_SENDER_ID</key>
+    <string>511821267483</string>
+    <key>PLIST_VERSION</key>
+    <string>1</string>
+    <key>BUNDLE_ID</key>
+    <string>com.iqonic.qrmenularavel</string>
+    <key>PROJECT_ID</key>
+    <string>qr-menu-laravel</string>
+    <key>STORAGE_BUCKET</key>
+    <string>qr-menu-laravel.appspot.com</string>
+    <key>IS_ADS_ENABLED</key>
+    <false></false>
+    <key>IS_ANALYTICS_ENABLED</key>
+    <false></false>
+    <key>IS_APPINVITE_ENABLED</key>
+    <true></true>
+    <key>IS_GCM_ENABLED</key>
+    <true></true>
+    <key>IS_SIGNIN_ENABLED</key>
+    <true></true>
+    <key>GOOGLE_AP
