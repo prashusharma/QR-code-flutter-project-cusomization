@@ -13,13 +13,44 @@ import 'package:qr_menu_laravel_flutter/utils/colors.dart';
 
 List<LanguageDataModel> languageList() {
   return [
-    LanguageDataModel(id: 1, name: 'English', subTitle: 'English', languageCode: 'en', fullLanguageCode: 'en_en-US', flag: 'images/flag/ic_us.png'),
-    LanguageDataModel(id: 2, name: 'Hindi', subTitle: 'हिंदी', languageCode: 'hi', fullLanguageCode: 'hi_hi-IN', flag: 'images/flag/ic_india.png'),
-    LanguageDataModel(id: 3, name: 'Arabic', subTitle: 'عربي', languageCode: 'ar', fullLanguageCode: 'ar_ar-AR', flag: 'images/flag/ic_ar.png'),
+    LanguageDataModel(
+        id: 1,
+        name: 'English',
+        subTitle: 'English',
+        languageCode: 'en',
+        fullLanguageCode: 'en_en-US',
+        flag: 'images/flag/ic_us.png'),
+    LanguageDataModel(
+        id: 2,
+        name: 'Hindi',
+        subTitle: 'हिंदी',
+        languageCode: 'hi',
+        fullLanguageCode: 'hi_hi-IN',
+        flag: 'images/flag/ic_india.png'),
+    LanguageDataModel(
+        id: 3,
+        name: 'Arabic',
+        subTitle: 'عربي',
+        languageCode: 'ar',
+        fullLanguageCode: 'ar_ar-AR',
+        flag: 'images/flag/ic_ar.png'),
+    LanguageDataModel(
+        id: 4,
+        name: 'French',
+        subTitle: 'français',
+        languageCode: 'fr',
+        fullLanguageCode: 'fr_fr-FR',
+        flag: 'images/flag/ic_fr.png'),
   ];
 }
 
-InputDecoration inputDecoration(BuildContext context, {String? hint, String? label, TextStyle? textStyle, Widget? prefix, EdgeInsetsGeometry? contentPadding, Widget? prefixIcon}) {
+InputDecoration inputDecoration(BuildContext context,
+    {String? hint,
+    String? label,
+    TextStyle? textStyle,
+    Widget? prefix,
+    EdgeInsetsGeometry? contentPadding,
+    Widget? prefixIcon}) {
   return InputDecoration(
     contentPadding: contentPadding,
     labelText: label,
@@ -30,18 +61,29 @@ InputDecoration inputDecoration(BuildContext context, {String? hint, String? lab
     prefixIcon: prefixIcon,
     errorMaxLines: 2,
     errorStyle: primaryTextStyle(color: Colors.red, size: 12),
-    focusedErrorBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(defaultRadius), borderSide: BorderSide(color: Colors.red, width: 1.0)),
-    errorBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(defaultRadius), borderSide: BorderSide(color: Colors.red, width: 1.0)),
-    enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(defaultRadius), borderSide: BorderSide(width: 1.0, color: context.dividerColor)),
-    border: OutlineInputBorder(borderRadius: BorderRadius.circular(defaultRadius), borderSide: BorderSide(width: 1.0, color: context.dividerColor)),
-    focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(defaultRadius), borderSide: BorderSide(color: primaryColor, width: 1.0)),
+    focusedErrorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(defaultRadius),
+        borderSide: BorderSide(color: Colors.red, width: 1.0)),
+    errorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(defaultRadius),
+        borderSide: BorderSide(color: Colors.red, width: 1.0)),
+    enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(defaultRadius),
+        borderSide: BorderSide(width: 1.0, color: context.dividerColor)),
+    border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(defaultRadius),
+        borderSide: BorderSide(width: 1.0, color: context.dividerColor)),
+    focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(defaultRadius),
+        borderSide: BorderSide(color: primaryColor, width: 1.0)),
     alignLabelWithHint: true,
   );
 }
 
 Future<File> getImageSource({bool isCamera = true}) async {
   final picker = ImagePicker();
-  final pickedImage = await picker.pickImage(source: isCamera ? ImageSource.camera : ImageSource.gallery);
+  final pickedImage = await picker.pickImage(
+      source: isCamera ? ImageSource.camera : ImageSource.gallery);
   return File(pickedImage!.path);
 }
 
@@ -52,7 +94,10 @@ String parseHtmlString(String? htmlString) {
 Future<List<File>> getMultipleFile() async {
   FilePickerResult? filePickerResult;
   List<File> imgList = [];
-  filePickerResult = await FilePicker.platform.pickFiles(allowMultiple: true, type: FileType.custom, allowedExtensions: ['jpg', 'png', 'jpeg']);
+  filePickerResult = await FilePicker.platform.pickFiles(
+      allowMultiple: true,
+      type: FileType.custom,
+      allowedExtensions: ['jpg', 'png', 'jpeg']);
 
   if (filePickerResult != null) {
     imgList = filePickerResult.paths.map((path) => File(path!)).toList();
@@ -66,12 +111,14 @@ int daysBetween(DateTime from, DateTime to) {
   return (to.difference(from).inHours / 24).round();
 }
 
-void reduceFromCart({required int quantity, required Menu menuData, Function? set}) {
+void reduceFromCart(
+    {required int quantity, required Menu menuData, Function? set}) {
   menuStore.cartList.forEach((element) {
     if (quantity > 0 && element.menu == menuData) {
       element.quantity = quantity;
     } else if (quantity == 0) {
-      QuantityMenuModel data = menuStore.cartList.firstWhere((element) => element.menu == menuData);
+      QuantityMenuModel data =
+          menuStore.cartList.firstWhere((element) => element.menu == menuData);
       menuStore.cartList.remove(data);
     }
   });
@@ -108,7 +155,8 @@ void addToCart({required int quantity, required Menu menuData}) {
     menuStore.setCartList(menuData, quantity);
   } else {
     if (menuStore.cartList.any((element) => element.menu == menuData)) {
-      QuantityMenuModel data = menuStore.cartList.firstWhere((element) => element.menu == menuData);
+      QuantityMenuModel data =
+          menuStore.cartList.firstWhere((element) => element.menu == menuData);
       data.quantity = quantity;
     } else {
       menuStore.setCartList(menuData, quantity);
@@ -127,12 +175,13 @@ int totalItems() {
 int totalCost() {
   int totalCost = 0;
   menuStore.cartList.forEach((element) {
-    totalCost = totalCost + (element.quantity.validate() * element.menu!.price.validate());
+    totalCost = totalCost +
+        (element.quantity.validate() * element.menu!.price.validate());
   });
 
   return totalCost;
 }
 
-Widget priceWidget({TextStyle? style,String? price,String? currency}){
-  return Text('$currency$price',style: style);
+Widget priceWidget({TextStyle? style, String? price, String? currency}) {
+  return Text('$currency$price', style: style);
 }

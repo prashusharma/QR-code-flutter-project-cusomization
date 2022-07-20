@@ -1,5 +1,6 @@
 const mBaseURL = 'https://qr-menu-laravel.web.app/';
-const mBaseUrl = "https://wordpress.iqonic.design/product/mobile/qr-menu-laravel/api/";
+const mBaseUrl =
+    "https://wordpress.iqonic.design/product/mobile/qr-menu-laravel/api/";
 
 /// REGION LIVESTREAM KEYS
 const tokenStream = 'tokenStream';
@@ -7,9 +8,9 @@ bool isSocialLogin = false;
 const String perPage = '-1';
 
 class AppConstant {
-  static const appName = "QR Menu";
+  static const appName = "Global Menu";
   static const appDescription =
-      'QR Menu Laravel is a well equipped Flutter app. On the user end, it offers the user a simple way to view the menu of a restaurant without even confronting the waiter. It offers an easy, manageable & on-the-go methodology of menu viewing process. While, on the restaurant owner end, the app offers a conventional and easily manageable method to manage restaurants, food categories and menuStyles';
+      'Global Menu Laravel is a well equipped Flutter app. On the user end, it offers the user a simple way to view the menu of a restaurant without even confronting the waiter. It offers an easy, manageable & on-the-go methodology of menu viewing process. While, on the restaurant owner end, the app offers a conventional and easily manageable method to manage restaurants, food categories and menuStyles';
   static const defaultLanguage = 'en';
 }
 
@@ -56,7 +57,7 @@ class SharePreferencesKey {
 
 class AppImages {
   static const placeHolderImage = "images/empty_image_placeholder.jpg";
-  static const app_logo = "images/qr-menu.png";
+  static const app_logo = "images/qr_menu.png";
   static const noDataImage = "images/no_data.png";
   static const paperLess = "images/paper.png";
   static const language = "images/language.png";
@@ -85,7 +86,8 @@ class Urls {
   static const supportURL = 'https://iqonic.desky.support/';
   static const codeCanyonURL = '';
   static const mailto = 'hello@iqonic.design';
-  static const documentation = 'https://wordpress.iqonic.design/docs/product/qr-menu-laravel/';
+  static const documentation =
+      'https://wordpress.iqonic.design/docs/product/qr-menu-laravel/';
   static const privacyPolicyURL = 'https://iqonic.design/privacy/';
 }
 
@@ -112,7 +114,9 @@ class APIEndPoint {
 }
 
 enum FileTypes { CANCEL, CAMERA, GALLERY }
+
 enum MenuType { IS_NEW, IS_SPICY, IS_JAIN, IS_SPECIAL, IS_POPULAR }
+
 enum RestaurantType { IS_VEG, IS_NON_VEG }
 
 class LoginTypes {

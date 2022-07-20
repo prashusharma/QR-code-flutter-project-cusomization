@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:qr_menu_laravel_flutter/language/LanguageAr.dart';
 import 'package:qr_menu_laravel_flutter/language/LanguageEn.dart';
+import 'package:qr_menu_laravel_flutter/language/LanguageFr.dart';
 import 'package:qr_menu_laravel_flutter/language/LanguageHi.dart';
 import 'package:qr_menu_laravel_flutter/language/Languages.dart';
 
@@ -15,6 +16,8 @@ class AppLocalizations extends LocalizationsDelegate<BaseLanguage> {
         return LanguageEn();
       case 'ar':
         return LanguageAr();
+      case 'fr':
+        return LanguageFr();
       case 'hi':
         return LanguageHi();
       default:
@@ -23,7 +26,8 @@ class AppLocalizations extends LocalizationsDelegate<BaseLanguage> {
   }
 
   @override
-  bool isSupported(Locale locale) => LanguageDataModel.languages().contains(locale.languageCode);
+  bool isSupported(Locale locale) =>
+      LanguageDataModel.languages().contains(locale.languageCode);
 
   @override
   bool shouldReload(LocalizationsDelegate<BaseLanguage> old) => false;
